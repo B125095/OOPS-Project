@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ranjan Kumar Nandi – About me</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef3f8; --ink:#0f1b33; --muted:#51607a; --line:#cfd9e6; --panel:#ffffff;
+  --screen:#8ff0c0; --gold:#e6b450; --steel1:#27456e; --steel2:#0f1b33;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0b1426;--ink:#eaf1ff;--muted:#9db0d1;--line:#22334f;--panel:#111e36}
+}
+:root[data-theme="dark"]{--bg:#0b1426;--ink:#eaf1ff;--muted:#9db0d1;--line:#22334f;--panel:#111e36}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+h1,h2,.display{font-family:Sora,system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 24px 64px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;min-height:min(86vh,720px);padding:32px 0}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.02;margin:0 0 20px;font-weight:800;letter-spacing:-.02em}
+.lede{font-size:1.15rem;max-width:34ch;color:var(--muted);margin:0 0 28px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.facts li{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 16px;font-size:.95rem}
+
+/* 3D card */
+.stage{perspective:1100px;display:grid;place-items:center;touch-action:pan-y}
+.float{animation:bob 6s ease-in-out infinite}
+.card{--rx:0deg;--ry:0deg;--flip:0deg;position:relative;width:min(420px,86vw);aspect-ratio:1.586;border:0;padding:0;background:none;cursor:pointer;
+  transform-style:preserve-3d;transform:rotateX(var(--rx)) rotateY(calc(var(--ry) + var(--flip)));transition:transform .5s cubic-bezier(.2,.8,.2,1);color:#fff;text-align:left}
+.card.live{transition:transform .08s linear}
+.card[aria-pressed="true"]{--flip:180deg}
+.card:focus-visible{outline:3px solid var(--screen);outline-offset:8px;border-radius:24px}
+.face{position:absolute;inset:0;border-radius:22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:24px 26px;overflow:hidden;
+  background:linear-gradient(135deg,var(--steel1),var(--steel2) 70%);box-shadow:0 30px 60px -20px rgba(8,16,40,.55),inset 0 0 0 1px rgba(255,255,255,.14);transform-style:preserve-3d}
+.face::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.18) 48%,transparent 60%);transform:translateX(var(--sheen,-40%));pointer-events:none}
+.front>*{transform:translateZ(34px)}
+.chip{width:52px;height:40px;border-radius:8px;background:linear-gradient(135deg,#f6d98b,var(--gold));position:relative}
+.chip::before{content:"";position:absolute;inset:8px 14px;border:1.5px solid rgba(90,60,0,.45);border-radius:4px}
+.holo{position:absolute;right:26px;top:24px;width:46px;height:46px;border-radius:50%;background:conic-gradient(from 0deg,#8ff0c0,#7aa7ff,#e6b450,#ff8fb1,#8ff0c0);opacity:.85;animation:spin 7s linear infinite}
+.name{position:absolute;left:26px;bottom:62px;font:800 1.45rem/1.1 Sora,system-ui,sans-serif;letter-spacing:.01em}
+.role{position:absolute;left:26px;bottom:26px;color:#b9cbef;font-size:.95rem}
+.no{position:absolute;left:26px;top:88px;font:600 1.05rem/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em;color:#d5e2ff}
+.back{transform:rotateY(180deg)}
+.stripe{position:absolute;left:0;right:0;top:26px;height:46px;background:#050a16}
+.back .info{position:absolute;left:26px;right:26px;top:96px;transform:translateZ(30px)}
+.back b{display:block;font:600 1.05rem/1.35 Sora,system-ui,sans-serif;margin-bottom:10px}
+.back span{display:block;color:#b9cbef;font-size:.93rem}
+.hint{margin:22px 0 0;color:var(--muted);font-size:.9rem;text-align:center}
+
+/* sections */
+section{border-top:1px solid var(--line);padding:56px 0 0;margin-top:40px}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 14px;line-height:1.15}
+.now{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.now p{max-width:56ch;margin:0 0 14px}
+.steps{padding-left:1.2em;margin:16px 0 0}
+.steps li{margin-bottom:6px}
+
+/* cube */
+.cubewrap{perspective:900px;display:grid;place-items:center;height:300px}
+.cube{--s:150px;position:relative;width:var(--s);height:var(--s);transform-style:preserve-3d;animation:tumble 18s linear infinite}
+.cube div{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:10px;font:600 .95rem/1.2 Sora,system-ui,sans-serif;color:#06281b;
+  background:linear-gradient(135deg,#a9f7d0,var(--screen));border:2px solid #4ccf98;border-radius:10px;backface-visibility:visible;opacity:.94}
+.cube .f1{transform:translateZ(75px)}
+.cube .f2{transform:rotateY(90deg) translateZ(75px)}
+.cube .f3{transform:rotateY(180deg) translateZ(75px)}
+.cube .f4{transform:rotateY(-90deg) translateZ(75px)}
+.cube .f5{transform:rotateX(90deg) translateZ(75px)}
+.cube .f6{transform:rotateX(-90deg) translateZ(75px)}
+.cap{text-align:center;color:var(--muted);font-size:.9rem;margin-top:6px}
+
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes tumble{from{transform:rotateX(-24deg) rotateY(0)}to{transform:rotateX(-24deg) rotateY(360deg)}}
+@keyframes drop{from{opacity:0;transform:translateY(-60px) rotateX(40deg)}to{opacity:1;transform:none}}
+.stage .float{animation:drop .9s cubic-bezier(.2,.8,.2,1) both,bob 6s ease-in-out .9s infinite}
+
+@media (max-width:820px){
+  .hero,.now{grid-template-columns:1fr}
+  .hero{min-height:0;padding-top:16px}
+  .cubewrap{height:260px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <div>
+      <h1 id="name"></h1>
+      <p class="lede" id="lede"></p>
+      <ul class="facts" id="facts"></ul>
+    </div>
+    <div>
+      <div class="stage" id="stage">
+        <div class="float">
+          <button class="card" id="card" aria-pressed="false" aria-label="ID card. Press to flip it.">
+            <div class="face front">
+              <div class="chip"></div><div class="holo"></div>
+              <div class="no" id="cardno"></div>
+              <div class="name" id="cardname"></div>
+              <div class="role" id="cardrole"></div>
+            </div>
+            <div class="face back">
+              <div class="stripe"></div>
+              <div class="info" id="backinfo"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <p class="hint">Move your pointer over the card to tilt it. Tap it to flip.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="now">
+      <div>
+        <h2>What I’m building right now</h2>
+        <p>An <strong>ATM Simulator</strong> for my Object-Oriented Programming course. It imitates a real ATM in a safe, virtual setting: card and PIN login, balance, withdraw, deposit, PIN change and a mini statement, with every input validated.</p>
+        <p>Balance and PIN stay private inside the classes, and savings and current accounts inherit from one base account, so the code shows OOP working on a familiar real-life system.</p>
+        <ol class="steps">
+          <li>Abstract and workflow go to my sir first.</li>
+          <li>Then the full project, submitted as a neat hard copy.</li>
+        </ol>
+      </div>
+      <div>
+        <div class="cubewrap" aria-hidden="true">
+          <div class="cube">
+            <div class="f1">Encapsulation</div><div class="f2">Abstraction</div>
+            <div class="f3">Inheritance</div><div class="f4">Polymorphism</div>
+            <div class="f5">Constructors</div><div class="f6">Exceptions</div>
+          </div>
+        </div>
+        <p class="cap">The OOP ideas behind the project</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+/* Edit this object to personalise the page. */
+const PROFILE = {
+  name: "Ranjan Kumar Nandi",
+  lede: "I’m a Computer Science student learning to turn programming theory into working software.",
+  facts: ["Computer Science and Engineering", "2nd year, 3rd semester", "International Institute of Information Technology"],
+  cardNo: "B125  095",
+  cardRole: "CSE student, 2nd year",
+  back: ["International Institute of Information Technology", "Computer Science and Engineering", "2nd year, 3rd semester", "Project: ATM Simulator"]
+};
+const $ = id => document.getElementById(id);
+$("name").textContent = PROFILE.name;
+$("lede").textContent = PROFILE.lede;
+$("cardname").textContent = PROFILE.name;
+$("cardno").textContent = PROFILE.cardNo;
+$("cardrole").textContent = PROFILE.cardRole;
+PROFILE.facts.forEach(t => { const li = document.createElement("li"); li.textContent = t; $("facts").appendChild(li); });
+$("backinfo").innerHTML = "";
+PROFILE.back.forEach((t, i) => {
+  const el = document.createElement(i === 0 ? "b" : "span");
+  el.textContent = t; $("backinfo").appendChild(el);
+});
+
+const card = $("card"), stage = $("stage");
+card.addEventListener("click", () => card.setAttribute("aria-pressed", card.getAttribute("aria-pressed") === "true" ? "false" : "true"));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduce) {
+  stage.addEventListener("pointermove", e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    card.classList.add("live");
+    card.style.setProperty("--ry", (x * 26).toFixed(1) + "deg");
+    card.style.setProperty("--rx", (-y * 22).toFixed(1) + "deg");
+    card.querySelectorAll(".face").forEach(f => f.style.setProperty("--sheen", (x * 90).toFixed(0) + "%"));
+  });
+  stage.addEventListener("pointerleave", () => {
+    card.classList.remove("live");
+    card.style.setProperty("--ry", "0deg"); card.style.setProperty("--rx", "0deg");
+  });
+}
+</script>
+</body>
+</html>
