@@ -167,9 +167,9 @@ classDiagram
 
 ## 🔄 Workflow
 
-<div align="center">
-  <img src="assets/workflow.svg" alt="Animated ATM workflow diagram" width="100%"/>
-</div>
+<p align="center">
+  <img src="./workflow.svg" alt="ATM Simulator Workflow Diagram" width="100%">
+</p>
 
 <details>
 <summary><b>🧭 Same flow as an interactive Mermaid chart (click to expand)</b></summary>
