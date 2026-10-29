@@ -1,6 +1,7 @@
 <div align="center">
-
-<img src="assets/banner.svg" alt="ATM Simulator animated banner" width="100%"/>
+<p align="center">
+  <img src="./banner.svg" alt="ATM Simulator Banner" width="100%">
+</p>
 
 <br/>
 
