@@ -7,7 +7,7 @@
   <table>
     <tr>
       <td align="center" width="60%">
-        <img src="./card.svg" alt="Portfolio Card" width="320">
+        <img src="./card.svg" alt="Portfolio Card" width="420">
       </td>
       <td align="center" width="55%">
         <img src="./cube.svg" alt="Animated OOP Cube" width="420">
