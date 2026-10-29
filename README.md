@@ -6,7 +6,7 @@
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="45%">
+      <td align="center" width="60%">
         <img src="./card.svg" alt="Portfolio Card" width="320">
       </td>
       <td align="center" width="55%">
