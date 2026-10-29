@@ -6,10 +6,10 @@
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="60%">
+      <td align="center" width="45%" style="border: none;">
         <img src="./card.svg" alt="Portfolio Card" width="420">
       </td>
-      <td align="center" width="55%">
+      <td align="center" width="55%" style="border: none;">
         <img src="./cube.svg" alt="Animated OOP Cube" width="420">
       </td>
     </tr>
