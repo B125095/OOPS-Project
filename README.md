@@ -11,6 +11,13 @@
 
 <br/>
 
+
+## 🔄 Workflow
+
+<p align="center">
+  <img src="./workflow.svg" alt="ATM Simulator Workflow Diagram" width="100%">
+</p>
+
 ![Language](https://img.shields.io/badge/Language-C%2B%2B%20%7C%20Java-7c4dff?style=for-the-badge)
 ![Paradigm](https://img.shields.io/badge/Paradigm-OOP-00e5ff?style=for-the-badge)
 ![Subject](https://img.shields.io/badge/Subject-OOPs%20Project-ff5ca8?style=for-the-badge)
@@ -165,11 +172,7 @@ classDiagram
 
 ---
 
-## 🔄 Workflow
 
-<p align="center">
-  <img src="./workflow.svg" alt="ATM Simulator Workflow Diagram" width="100%">
-</p>
 
 <details>
 <summary><b>🧭 Same flow as an interactive Mermaid chart (click to expand)</b></summary>
