@@ -5,61 +5,6 @@
 
 <br/>
 
-<style>
-.cubewrap {
-    perspective: 900px;
-    display: grid;
-    place-items: center;
-    height: 300px;
-}
-
-.cube {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    animation: tumble 18s linear infinite;
-}
-
-.cube div {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 10px;
-    font: 600 15px/1.2 sans-serif;
-    color: #06281b;
-    background: linear-gradient(135deg, #a9f7d0, #8ff0c0);
-    border: 2px solid #4ccf98;
-    border-radius: 10px;
-    opacity: 0.94;
-    backface-visibility: visible;
-}
-
-.cube .f1 { transform: translateZ(75px); }
-.cube .f2 { transform: rotateY(90deg) translateZ(75px); }
-.cube .f3 { transform: rotateY(180deg) translateZ(75px); }
-.cube .f4 { transform: rotateY(-90deg) translateZ(75px); }
-.cube .f5 { transform: rotateX(90deg) translateZ(75px); }
-.cube .f6 { transform: rotateX(-90deg) translateZ(75px); }
-
-@keyframes tumble {
-    from {
-        transform: rotateX(-24deg) rotateY(0deg);
-    }
-    to {
-        transform: rotateX(-24deg) rotateY(360deg);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .cube {
-        animation: none;
-    }
-}
-</style>
-
 <div class="cubewrap">
     <div class="cube">
         <div class="f1">Encapsulation</div>
