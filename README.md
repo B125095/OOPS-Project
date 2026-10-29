@@ -39,9 +39,10 @@
 
 ## 🔄 Workflow
 
-<p align="center">
-  <img src="./workflow.svg" alt="ATM Simulator Workflow Diagram" width="100%">
-</p>
+<div align="center">
+  <img src="./workflow3d.svg" alt="3D Workflow Diagram" width="100%">
+</div>
+
 
 ---
 
