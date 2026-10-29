@@ -5,6 +5,12 @@
 
 <br/>
 
+<div align="center">
+
+<img src="./cube.svg" alt="Animated OOP Cube" width="350">
+
+</div>
+
 
 
 <a href="https://git.io/typing-svg">
