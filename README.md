@@ -3,13 +3,19 @@
   <img src="./banner.svg" alt="ATM Simulator Banner" width="100%">
 </p>
 
-<br/>
-
 <div align="center">
-
-<img src="./cube.svg" alt="Animated OOP Cube" width="350">
-
+  <table>
+    <tr>
+      <td align="center" width="45%">
+        <img src="./card.svg" alt="Portfolio Card" width="320">
+      </td>
+      <td align="center" width="55%">
+        <img src="./cube.svg" alt="Animated OOP Cube" width="420">
+      </td>
+    </tr>
+  </table>
 </div>
+
 
 
 
