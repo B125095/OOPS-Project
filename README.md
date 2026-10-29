@@ -5,6 +5,72 @@
 
 <br/>
 
+<style>
+.cubewrap {
+    perspective: 900px;
+    display: grid;
+    place-items: center;
+    height: 300px;
+}
+
+.cube {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: tumble 18s linear infinite;
+}
+
+.cube div {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 10px;
+    font: 600 15px/1.2 sans-serif;
+    color: #06281b;
+    background: linear-gradient(135deg, #a9f7d0, #8ff0c0);
+    border: 2px solid #4ccf98;
+    border-radius: 10px;
+    opacity: 0.94;
+    backface-visibility: visible;
+}
+
+.cube .f1 { transform: translateZ(75px); }
+.cube .f2 { transform: rotateY(90deg) translateZ(75px); }
+.cube .f3 { transform: rotateY(180deg) translateZ(75px); }
+.cube .f4 { transform: rotateY(-90deg) translateZ(75px); }
+.cube .f5 { transform: rotateX(90deg) translateZ(75px); }
+.cube .f6 { transform: rotateX(-90deg) translateZ(75px); }
+
+@keyframes tumble {
+    from {
+        transform: rotateX(-24deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-24deg) rotateY(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cube {
+        animation: none;
+    }
+}
+</style>
+
+<div class="cubewrap">
+    <div class="cube">
+        <div class="f1">Encapsulation</div>
+        <div class="f2">Abstraction</div>
+        <div class="f3">Inheritance</div>
+        <div class="f4">Polymorphism</div>
+        <div class="f5">Constructors</div>
+        <div class="f6">Exceptions</div>
+    </div>
+</div>
+
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00E5FF&center=true&vCenter=true&width=720&height=45&lines=%F0%9F%92%B3+Insert+your+card...;%F0%9F%94%90+Enter+your+secret+PIN...;%F0%9F%92%B0+Withdraw+%7C+Deposit+%7C+Check+Balance;%F0%9F%A7%A0+Built+with+pure+OOP+concepts;%E2%9C%85+Safe.+Modular.+Extensible." alt="Typing animation"/>
 </a>
