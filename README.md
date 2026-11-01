@@ -1,6 +1,6 @@
 <div align="center">
 <p align="center">
-  <img src="./assets/banner.svg" alt="ATM Simulator Banner" width="100%">
+  <img src="./assets/.banner.svg" alt="ATM Simulator Banner" width="100%">
 </p>
 
 <a href="https://git.io/typing-svg">
