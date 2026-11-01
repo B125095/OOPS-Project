@@ -15,7 +15,7 @@
         <img src="./assets/card.svg" alt="Portfolio Card" width="420">
       </td>
       <td align="center" width="55%" style="border: none;">
-        <img src="./cube.svg" alt="Animated OOP Cube" width="420">
+        <img src="./assets/cube.svg" alt="Animated OOP Cube" width="420">
       </td>
     </tr>
   </table>
